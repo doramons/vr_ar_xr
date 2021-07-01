@@ -31,3 +31,23 @@
           - built-in
       - 렌더 파이프라인은 모두 다른 기능과 특성을 가지고 있음, 사용자는 개발의 초기 단계에서 프로젝트(게임,어플,플랫폼)에 따라 적절한 렌더파이프라인 선택하는 것이 중요
   - built-in render pipeline(빌트인 렌더 파이프라인)
+      - 유니티에 기본으로 설정되어있는 디폴트 렌더 파이프라인이다.
+      - 커스텀 확장에 관해 SRP(Scriptable render pipeline)에 비해 제한적
+      - FRP(Forward rendering path)와 DRP(Defered rendering path) 중 한가지를 선택할 수 있으며 커맨드 버퍼와 콜백으로 기능 확장 가증
+  - SRP (Scriptable render pipeline)
+      - 스크립트로 렌더링 제어 및 커스터마이징 가능
+      - C# 스크립트로 작성하여 기존 파이프라인 수정 및 재구성
+      - 유니티는 2개의 빌트인 SRP 제공함 (URP, HDRP)
+  - LWRP(Lightweight render pipeline)
+      - 유니티에 내장되었던 SRP인데 유니티 2019.3 버전 이후 URP로 변경됨
+  - URP(Universal render pipeline)
+      - 유니티 내장 SRP (LWRP의 업그레이드 버전)
+      - 뛰어난 성능 및 향상된 그래픽 품질을 제공하는 SRP ( 빌트인보다 유연하고 확장성이 좋으며 다양한 플랫폼(모바일,콘솔,PC,VR)에 최적화된 그래픽 제공 )
+      - 싱글패스 포워드 렌더링, 셰이더 그래프, VFX그래프 지원
+      ![image](https://user-images.githubusercontent.com/76146752/124094044-5ec5c880-da93-11eb-9875-4be60cf6793b.png)
+      셰이더 그래프
+  - HDRP(High definition render pipeline)
+      - 유니티에 내장된 고해상도 렌더 파이프라인
+      - 물리기반의 렌더링과 우수한 GPU 성능을 가지고 있어 매우 정확하고 사실적인 그래픽 제공 ( 고사양 그래픽이 요구되는 프로젝으에 적합 )
+      - 컴퓨트쉐이더 기술과 GPU 하드웨어 사용하며 포워드 렌더링, 디퍼드 렌더링을 모두 지원함
+      - https://blog.unity.com/kr/technology/the-high-definition-render-pipeline-getting-started-guide-for-artists
